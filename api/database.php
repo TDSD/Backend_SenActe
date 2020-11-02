@@ -13,6 +13,8 @@
         } catch (Exception $e) {
             die('Probleme de connexion: '.$e->getMessage());
         }
-        
+        mysqli_set_charset($connect, "utf8");
+        return $connect;
     }
+    $con = connexion();
 ?>
