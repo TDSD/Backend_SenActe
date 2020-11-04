@@ -7,14 +7,14 @@
     define('DB_PASS', 'Passer');
     define('DB_NAME', 'SenActe');
 
-    function connexion(){
-        try {
-            $bdd = new PDO('mysql:host=DB_HOST;dbname=DB_NAME','DB_USER','DB_PASS',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        } catch (Exception $e) {
-            die('Probleme de connexion: '.$e->getMessage());
+    function connect(){
+      
+        $con = mysqli_connect(DB_HOST ,DB_USER ,DB_PASS ,DB_NAME);
+        if (mysqli_connect_errno($connect)) {
+            die("Failed to connect:" . mysqli_connect_error());
         }
         mysqli_set_charset($connect, "utf8");
         return $connect;
     }
-    $con = connexion();
+    $bdd = connect();
 ?>
