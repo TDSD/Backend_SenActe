@@ -7,11 +7,11 @@
         if ($reponse = mysqli_query($bdd,$requette)) {
             $i=0;
             while ($row = mysqli_fetch_assoc($reponse)) {
-                $tableDemande[$i]['prenom'] = $donnees['prenom'];
-                $tableDemande[$i]['nom'] = $donnees['nom'];
-                $tableDemande[$i]['email'] = $donnees['email'];
-                $tableDemande[$i]['telephone'] = $donnees['telephone'];
-                $tableDemande[$i]['typeDemande'] = $donnees['typeDemande'];
+                $tableDemande[$i]['prenom'] = $row['prenom'];
+                $tableDemande[$i]['nom'] = $row['nom'];
+                $tableDemande[$i]['email'] = $row['email'];
+                $tableDemande[$i]['telephone'] = $row['telephone'];
+                $tableDemande[$i]['typeDemande'] = $row['typeDemande'];
                 $i++;
             }
             echo json_encode($tableDemande);
