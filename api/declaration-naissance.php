@@ -5,18 +5,18 @@
         //extraction des données
         $request = json_decode($datas);
         //filtration des données
-        $numeroRegistre = mysqli_real_escape_string($request->numeroRegistre);
-        $nom = mysqli_real_escape_string($request->nom);
-        $prenom = mysqli_real_escape_string($request->prenom);
-        $dateNaissance = mysqli_real_escape_string($request->dateNaissance);
-        $heureNaissance = mysqli_real_escape_string($request->heureNaissance);
-        $lieuNaisance = mysqli_real_escape_string($request->lieuNaissance);
-        $sexe = mysqli_real_escape_string($request->sexe);
-        $prenomMere = mysqli_real_escape_string($request->$prenomMere);
-        $nomMere = mysqli_real_escape_string($request->nomMere);
-        $prenomPere = mysqli_real_escape_string($request->$prenomPere);
-        $nomPere = mysqli_real_escape_string($request->nomPere);
-        $paysNaissance = mysqli_real_escape_string($request->paysNaissance);
+        $numeroRegistre = mysqli_real_escape_string($bdd,trim($request->numeroRegistre));
+        $nom = mysqli_real_escape_string($bdd,trim($request->nom));
+        $prenom = mysqli_real_escape_string($bdd,trim($request->prenom));
+        $dateNaissance = mysqli_real_escape_string($bdd,trim($request->dateNaissance));
+        $heureNaissance = mysqli_real_escape_string($bdd,trim($request->heureNaissance));
+        $lieuNaisance = mysqli_real_escape_string($bdd,trim($request->lieuNaissance));
+        $sexe = mysqli_real_escape_string($bdd,trim($request->sexe));
+        $prenomMere = mysqli_real_escape_string($bdd,trim($request->$prenomMere));
+        $nomMere = mysqli_real_escape_string($bdd,trim($request->nomMere));
+        $prenomPere = mysqli_real_escape_string($bdd,trim($request->$prenomPere));
+        $nomPere = mysqli_real_escape_string($bdd,trim($request->nomPere));
+        $paysNaissance = mysqli_real_escape_string($bdd,trim($request->paysNaissance));
         //enregistrement des données
         $requette = "INSERT INTO ActeNaissance (numeroRegistre,nom,prenom,dateNaissance,lieuNaissance,heureNaissance,sexe,prenomMere,nomMere,prenomPere,nomPere,paysNaissance) VALUES ('$numeroRegistre','$nom','$prenom','$dateNaissance','$paysNaissance')";
         if(mysqli_query($bdd,$requette)){
