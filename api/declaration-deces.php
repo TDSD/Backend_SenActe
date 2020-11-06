@@ -11,7 +11,7 @@
         $prenom = mysqli_real_escape_string($request->prenom);
         $dateNaissance = mysqli_real_escape_string($request->dateNaissance);
         $heureNaissance = mysqli_real_escape_string($request->heureNaissance);
-        $lieuNaisance = mysqli_real_escape_string($request->lieuNaissance);
+        $lieuNaissance = mysqli_real_escape_string($request->lieuNaissance);
         $sexe = mysqli_real_escape_string($request->sexe);
         $prenomMere = mysqli_real_escape_string($request->prenomMere);
         $nomMere = mysqli_real_escape_string($request->nomMere);
@@ -23,7 +23,7 @@
         $profession = mysqli_real_escape_string($request->profession);
         
         //enregistrement des données
-        $requette = "INSERT INTO ActeNaissance (numeroRegistre,nom,prenom,dateNaissance,lieuNaissance,heureNaissance,sexe,prenomMere,nomMere,prenomPere,nomPere,dateDeces,heureDeces,lieuDeces,profession) VALUES ('$numeroRegistre','$nom','$prenom','$dateNaissance',$lieuNaissance,$heureNaisance,$sexe,$prenomMere,$nomMere,$prenomPere,$nomPere,$dateDeces,$heureDeces,$lieuDeces,'$profession')";
+        $requette = "INSERT INTO ActeDeces (numeroRegistre,nom,prenom,dateNaissance,lieuNaissance,heureNaissance,sexe,prenomMere,nomMere,prenomPere,nomPere,dateDeces,heureDeces,lieuDeces,profession) VALUES ('$numeroRegistre','$nom','$prenom','$dateNaissance',$lieuNaissance,$heureNaisance,$sexe,$prenomMere,$nomMere,$prenomPere,$nomPere,$dateDeces,$heureDeces,$lieuDeces,'$profession')";
         if(mysqli_query($bdd,$requette)){
 
             http_response_code(201);
