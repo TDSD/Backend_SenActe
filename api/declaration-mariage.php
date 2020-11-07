@@ -12,16 +12,16 @@
           $nomMr = mysqli_real_escape_string($request->nomMr);
           $prenomMr = mysqli_real_escape_string($request->prenomMr);
           $professionMr = mysqli_real_escape_string($request->professionMr);
-          $dateNaissanceMr = mysqli_real_escape_string($request->dateNaissanceMr);
-          $lieuNaissanceMr = mysqli_real_escape_string($request->lieuNaissanceMr);
+          $dateNaissMr = mysqli_real_escape_string($request->dateNaissMr);
+          $lieuNaissMr = mysqli_real_escape_string($request->lieuNaissMr);
           $domicileMr = mysqli_real_escape_string($request->domicileMr);
           $nomPrenomPereMr = mysqli_real_escape_string($request->nomPrenomPereMr);
           $nomPrenomMereMr = mysqli_real_escape_string($request->nomPrenomMereMr);
           $nomMme = mysqli_real_escape_string($request->nomMme);
           $prenomMme = mysqli_real_escape_string($request->prenomMme);
           $professionMme = mysqli_real_escape_string($request->professionMme);
-          $dateNaissanceMme = mysqli_real_escape_string($request->dateNaissanceMme);
-          $lieuNaissanceMme = mysqli_real_escape_string($request->lieuNaissanceMme);
+          $dateNaissMme = mysqli_real_escape_string($request->dateNaissMme);
+          $lieuNaissMme = mysqli_real_escape_string($request->lieuNaissMme);
           $domicileMme = mysqli_real_escape_string($request->domicileMme);
           $nomPrenomPereMme = mysqli_real_escape_string($request->nomPrenomPereMme);
           $nomPrenomMereMme = mysqli_real_escape_string($request->nomPrenomMereMme);
@@ -30,7 +30,7 @@
           $prixDote = mysqli_real_escape_string($request->prixDote);
           $typeMariage = mysqli_real_escape_string($request->typeMariage);
           
-          $req = "INSERT INTO ActeMariage (numeroRegistre,anneeActe,nomOfficier,prenomOfficier,nomMr,prenomMr,professionMr,dateNaissanceMr,lieuNaissanceMr,domicileMr,nomPrenomPereMr,nomPrenomMereMr,nomMme,prenomMme,professionMme,dateNaissanceMme,lieuNaissanceMme,domicileMme,nomPrenomPereMme,nomPrenomMereMme,dateEnregistreMariage,dateMariageCoutume,prixDote,typeMariage) VALUES ('$numeroRegistre','$anneeActe','$nomOfficier','$prenomOfficier','$nomMr','$prenomMr','$professionMr','$dateNaissanceMr','$lieuNaissanceMr','$domicileMr','$nomPrenomPereMr','$nomPrenomMereMr','$nomMme','$prenomMme','$professionMme','$dateNaissanceMme','$lieuNaissanceMme','$domicileMme','$nomPrenomPereMme','$nomPrenomMereMme',now(),'$dateMariageCoutume','$prixDote','$typeMariage')";
+          $req = "INSERT INTO ActeMariage (numeroRegistre,anneeActe,nomOfficier,prenomOfficier,nomMr,prenomMr,professionMr,dateNaissMr,lieuNaissMr,domicileMr,nomPrenomPereMr,nomPrenomMereMr,nomMme,prenomMme,professionMme,dateNaissMme,lieuNaissMme,domicileMme,nomPrenomPereMme,nomPrenomMereMme,dateEnregistreMariage,dateMariageCoutume,prixDote,typeMariage) VALUES ('$numeroRegistre','$anneeActe','$nomOfficier','$prenomOfficier','$nomMr','$prenomMr','$professionMr','$dateNaissMr','$lieuNaissMr','$domicileMr','$nomPrenomPereMr','$nomPrenomMereMr','$nomMme','$prenomMme','$professionMme','$dateNaissMme','$lieuNaissMme','$domicileMme','$nomPrenomPereMme','$nomPrenomMereMme',now(),'$dateMariageCoutume','$prixDote','$typeMariage')";
         if(mysli_query($bdd,$req)){
             $acteMariage=[
                 'numeroRegistre'=>$numeroRegistre,
@@ -40,16 +40,16 @@
                 'nomMr'=>$nomMr,
                 'prenomMr'=>$prenomMr,
                 'professionMr'=>$professionMr,
-                'dateNaissanceMr'=>$dateNaissanceMr,
-                'lieuNaissanceMr'=>$lieuNaissanceMr,
+                'dateNaissMr'=>$dateNaissMr,
+                'lieuNaissMr'=>$lieuNaissMr,
                 'domicileMr'=>$domicileMr,
                 'nomPronomPereMr'=>$nomPronomPereMr,
                 'nomPrenomMereMr'=>$nomPrenomMereMr,
                 'nomMme'=>$nomMme,
                 'prenomMme'=>$prenomMme,
                 'professionMme'=>$professionMme,
-                'dateNaissanceMme'=>$dateNaissanceMme,
-                'lieuNaissanceMme'=>$lieuNaissanceMme,
+                'dateNaissMme'=>$dateNaissMme,
+                'lieuNaissMme'=>$lieuNaissMme,
                 'domicileMme'=>$domicileMme,
                 'nomPronomPereMme'=>$nomPrenomPereMme,
                 'nomPrenomMereMme'=>$nomPrenomMereMme,
